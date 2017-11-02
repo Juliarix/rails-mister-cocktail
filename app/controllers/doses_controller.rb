@@ -9,19 +9,20 @@ class DosesController < ApplicationController
   def create
     @dose = Dose.new(dose_params)
     if @dose.save
-      redirect_to dose_path(@dose.cocktail)
+      redirect_to dose_path(@dose)
     else
       render :new
     end
   end
 
-  def delete
+  def destroy
+    @dose.destroy!
   end
 
   private
 
   def dose_params
-    params.require(:dose).permit(:description, :cocktail_id, :ingredient_id)
+    params.require(:dose).permit(:id)
   end
 
   def set_dose

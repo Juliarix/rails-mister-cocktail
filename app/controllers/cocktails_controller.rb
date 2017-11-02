@@ -7,7 +7,6 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
-    @cocktail.save
   end
 
   def show
@@ -31,7 +30,7 @@ class CocktailsController < ApplicationController
   private
 
   def set_cocktail
-    @cocktail = Cocktail.find(params[:ingredient_id, :dose_id])
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def cocktail_params
