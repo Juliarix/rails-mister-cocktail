@@ -1,0 +1,42 @@
+Deployment
+
+psql -d postgres
+
+brew install postgresql
+
+rails new $YOUR_APP_NAME -T --database=postgresql
+
+cd $YOUR_APP_NAME
+
+git init
+
+git add .
+
+git commit -m "Initial commit"
+
+hub create
+
+git push origin master
+
+rails db:create  (use with postgres to create db)
+
+root 'articles#index'  (will go to the home page of the app and not rails)
+
+Heroku need us to define what version of Ruby we are using
+
+ruby '2.3.4' in our gemfile
+
+Istall heroku:  brew install heroku
+
+heroku login
+
+heroku create test-blog
+
+heroku run rails db:migrate
+
+heroku run rails c
+
+
+
+
+
