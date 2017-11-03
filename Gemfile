@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'cloudinary'
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass'

@@ -1,16 +1,16 @@
-<h1 class="text-center">Your cocktail list</h1>
+<body style="background-color: #BEF7EB">
+  <h1 class="text-center">Your cocktail list</h1>
+  <div class="container">
+    <div class="text-center padded"><%= cl_image_tag "Jamaican_Coffee", height: 500, width: 600, crop: :fill %>
+    </div>
 
-<%= cl_image_tag("Jamaican_Coffee.jpg",
-      width: 400, height: 300, crop: :fill) %>
-
-<div class="text-center padded">
-  <%= link_to "Create a cocktail", new_cocktail_path, class: 'btn btn-primary' %>
-</div>
-
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-    <% end %>
+    <div class="text-center padded">
+      <div class="row">
+        <%= link_to "Create a cocktail", new_cocktail_path, class: 'btn btn-primary btn-medium' %>
+        <% @cocktails.each do |cocktail| %>
+          <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
+</body>
