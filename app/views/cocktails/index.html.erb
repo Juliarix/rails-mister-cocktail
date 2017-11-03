@@ -1,5 +1,8 @@
 <h1 class="text-center">Your cocktail list</h1>
 
+<%= cl_image_tag("Jamaican_Coffee.jpg",
+      width: 400, height: 300, crop: :fill) %>
+
 <div class="text-center padded">
   <%= link_to "Create a cocktail", new_cocktail_path, class: 'btn btn-primary' %>
 </div>
